@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('haya','App\Http\Controllers\FirstController@showString');
+
+Route::get('/register_user',[RegisterController::class,'getdata']);
+Route::get('/register_id',[RegisterController::class,'getid']);
